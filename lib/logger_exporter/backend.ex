@@ -98,7 +98,7 @@ defmodule LoggerExporter.Backend do
     log = formatter.format_event(level, msg, ts, md, md_keys)
 
     %Event{
-      timestamp_ns: System.os_time(:nanosecond),
+      timestamp_ns: "#{System.os_time(:nanosecond)}",
       log: log
     }
   end
